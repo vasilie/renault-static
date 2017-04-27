@@ -1,0 +1,39 @@
+@mixin transition($value){
+  -moz-transition:#{$value};
+  -o-transition:#{$value};
+  -ms-transition:#{$value};
+  -webkit-transition:#{$value};
+  transition:#{$value};
+}
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+  #{$property}: $value;
+}
+$cubic-bezier1 : 'cubic-bezier(0,1,1,1)';
+
+$decelerationCurve : 'cubic-bezier(0.0, 0.0, 0.2, 1)';
+$accelerationCurve : 'cubic-bezier(0.4, 0.0, 1, 1)';
+$sharpCurve : 'cubic-bezier(0.4, 0.0, 0.6, 1)';
+$standardCurve : 'cubic-bezier(0.4, 0.0, 0.2, 1)';
+
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+@mixin lineHeight($size) {
+  line-height: $size; //Fallback in px
+  line-height: calculateRem($size);
+}
+// @mixin fhSettings($page, $color, $image){
+//   #{$page} {
+//     background: green;
+//     .b-fluid-header {
+//       background-image:url(../../assets/img/$image);
+//     }
+//     // .b-fluid-header__circle {
+//     //   fill:$color;
+//     // }
+//   }
+// }

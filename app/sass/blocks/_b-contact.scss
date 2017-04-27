@@ -1,0 +1,43 @@
+.b-contacts {
+  clear: both;
+  overflow: hidden;
+  margin-bottom: 14%;
+  h2 {
+    margin-bottom: 8%;
+  }
+  h5 {
+    text-align: center;
+    margin-bottom: 2%;
+  }
+}
+.b-contacts__item {
+  width: 40%;
+  float: left;
+  h4 {
+    margin-bottom: 25px;
+    @include breakpoint(mobile) {
+      margin-bottom: 4%;
+    }
+  }
+  p {
+    font-family: $text__family--Roboto;
+    @include lineHeight(23px);
+    color:#95989A;
+}
+  &:nth-of-type(3){
+    width: 20%;
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 11%;
+  }
+}
+.b-contact__item__button {
+  cursor:pointer;
+  @include fontSize(13px);
+  font-weight: 400;
+}

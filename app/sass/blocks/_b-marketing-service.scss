@@ -1,0 +1,51 @@
+.b-marketing-service {
+  text-align: center;
+  display: block;
+}
+.b-marketing-service--top,
+.b-marketing-service--bottom {
+  @extend .b-marketing-service;
+}
+.b-marketing-service--top {
+  margin-bottom: 11%;
+  @include lineHeight(33px);
+  @include fontSize(20px);
+  h2 {
+    margin-bottom: 13%;
+  }
+  p {
+    padding:0 4%;
+  }
+  @include breakpoint(mobile) {
+    margin-bottom: 21%;
+    text-align: left;
+    p {
+      @include fontSize(16px);
+      @include lineHeight(30px);
+    }
+  }
+}
+.b-marketing-service--bottom {
+  font-family: $text__family--Roboto;
+  h4 {
+    @include fontSize(19px);
+    font-weight: normal;
+    margin-bottom: 5%;
+  }
+  p {
+    padding:0 4%;
+    @include lineHeight(28px);
+    font-weight: 100;
+  }
+  margin-bottom: 33%;
+  @include breakpoint(mobile) {
+    margin-bottom: 40%;
+    text-align: left;
+    h4 {
+      text-align: center;
+    }
+    p {
+      @include fontSize(16px);
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@mixin breakpoint($point) {
+  @if $point == littlemobile {
+     @media (max-width: 600px)  { @content ; }
+  }
+  @if $point == typoMax {
+     @media (max-width: 1600px)  { @content ; }
+  }
+  @if $point == mobile {
+     @media (max-width: 700px)  { @content ; }
+  }
+  @if $point == tablet {
+     @media (max-width: 1025px)  { @content ; }
+  }
+  @if $point == laptop {
+     @media (max-width: 1450px)  { @content ; }
+  }
+  @if $point == iphone4 {
+     @media (min-device-width : 320px) and (max-height: 450px) { @content ; }
+  }
+  @if $point == iphone6 {
+     @media (min-device-width : 375px) and (max-device-width : 667px) { @content ; }
+  }
+}

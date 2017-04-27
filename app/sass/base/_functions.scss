@@ -1,0 +1,7 @@
+@function cvp($target, $container) {
+  @return ($target / $container) * 100vw;
+}
+@function calculateRem($size) {
+  $remSize: $size / $base__font-size;
+  @return #{$remSize}rem;
+}

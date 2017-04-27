@@ -1,0 +1,32 @@
+.elem-center {
+  display: block;
+  text-align: center;
+  h2 {
+    display: inline-block;
+  }
+}
+.arr-go {
+  float: right;
+  margin-right: 15px;
+  background: url(../../assets/img/arrow-visit.svg);
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-ransform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  width: 20px;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.text-align--left {
+  text-align: left;
+}
+.no-scroll {
+  overflow: hidden;
+}

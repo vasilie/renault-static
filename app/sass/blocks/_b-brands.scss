@@ -1,0 +1,202 @@
+.b-brands {
+  display: block;
+  margin-bottom: 8%;
+  overflow: hidden;
+  &>a {
+    display: block;
+    // float: left;
+  }
+  h2 {
+    margin-bottom: 8%;
+    @include breakpoint(mobile) {
+      @include fontSize(37px);
+      @include lineHeight(15px);
+      margin-bottom: 15%;
+    }
+  }
+  @include breakpoint(mobile) {
+    padding-top:0;
+  }
+}
+
+.b-brands__item__background {
+  width: 100%;
+  transition:all 1300ms;
+  position: absolute;
+  display: block;
+  top:0;
+  transform:scale(1.02);
+}
+.b-brands__item {
+  background-image: none !important;
+  width: 25%;
+  float: left;
+  padding-top:25%;
+  overflow: hidden;
+  position: relative;
+  // border-bottom:1px solid #eee;
+  // border:1px solid red;d
+  transition:all 300ms;
+  // background-size: contain;
+  background-size: 100%;
+  background-position: center;
+  &:hover {
+    .b-brands__item__background {
+      transform:scale(1.1);
+    }
+  }
+  &.double,
+  &.blank {
+    padding-top:25%;
+  }
+  &.double {
+    width: 50%;
+    position: relative;
+    @include breakpoint(tablet) {
+      opacity: 0;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+      padding-top: 64%;
+      opacity: 1;
+    }
+  }
+  &.blank {
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+    // left: 5%;
+    padding-top: 58%;
+    margin-bottom: 0%;
+    // border-bottom: 1px solid #eee;
+    background-size: 200%;
+    background-position: center;
+    // border-top: 1px solid #eee;
+  }
+  &.atyabtabkha {
+    background-image:url(#{$assetpath}img/brands/atyabtabkha.png);
+    float: left;
+  }
+  &.duniatti {
+    background-image:url(#{$assetpath}img/brands/duniatti.png);
+  }
+  &.yasmina {
+    background-image:url(#{$assetpath}img/brands/yasmina.png);
+  }
+  &.azilanti {
+    background-image:url(#{$assetpath}img/brands/3a2ilati.png);
+  }
+  &.warrini {
+    background-image:url(#{$assetpath}img/brands/warrini.png);
+  }
+  &.mazyun {
+    background-image:url(#{$assetpath}img/brands/mazyun.png);
+  }
+  &.mashasheri {
+    background-image:url(#{$assetpath}img/brands/mashasheri.png);
+  }
+
+  &.double.first {
+    float: right;
+  }
+  &.double.type2 {
+    @include breakpoint(mobile) {
+      top: 0;
+      left: 0;
+      /* padding-top: 50%; */
+      height: 100%;
+      width: 100%;
+      top: 35%;
+    }
+  }
+  @include breakpoint(mobile) {
+    padding-top: 100%;
+  }
+}
+.b-brands__item__logo {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left:20%;
+  // opacity: 0.7;
+  transform: translateY(-50%);
+  @include breakpoint(mobile) {
+    // top:0;
+  }
+}
+.b-brands__social {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 6%;
+  @include breakpoint(mobile) {
+    margin-bottom: 9%;
+  }
+}
+.b-brands__social__item {
+  display: inline-block;
+  width: 30px;
+  margin:0 8px;
+  text-align: center;
+  img {
+    height: 27px;
+  }
+  &:nth-child(1){
+    img {
+      height: 30px;
+    }
+  }
+}
+.box {
+  transform:scale(1.1) translateY(10px);
+}
+
+.b-brands__desc {
+  position: absolute;
+  left: 16%;
+  bottom: 33%;
+  width: 60%;
+  @include lineHeight(25px);
+  .nbr {
+    @include fontSize(181px);
+    position: relative;
+    top: -17px;
+    left: -76px;
+    /* font-weight: bold; */
+    color: #eee;
+    z-index: -1;
+    @include breakpoint(mobile) {
+      left: 17px;
+    }
+  }
+  .text {
+    @include fontSize(24px);
+    @include lineHeight(38px);
+
+    @include breakpoint(mobile) {
+      @include fontSize(17px);
+      @include lineHeight(24px);
+      width: 80%;
+      margin-left: 10%;
+    }
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+    left:0;
+    bottom:0;
+    padding-bottom: 16%;
+  }
+}
+.double.type2 .b-brands__desc {
+  position: absolute;
+  left: 33%;
+  bottom: 35%;
+  width: 60%;
+  @include breakpoint(mobile) {
+    top: 39%;
+    left: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,62 @@
+.b-button {
+  width: 220px;
+  height: 50px;
+  display:block;
+  text-align: center;
+  @include lineHeight(50px);
+  @include breakpoint(tablet) {
+    height: 45px;
+    @include lineHeight(45px);
+    width: 190px;
+  }
+  @include breakpoint(mobile) {
+    height: 50px;
+    width: auto;
+    padding: 0 15px;
+    @include lineHeight(50px);
+  }
+}
+.b-button--red {
+  @extend .b-button;
+  background: #E5204B;
+  color:white;
+}
+.b-button--transparent {
+  @extend .b-button;
+  border: 2px solid #222;
+  @include lineHeight(44px);
+  &:hover {
+    background: #222;
+    color:white;
+  }
+}
+.elem-center div {
+  display: inline-block;
+}
+.elem-center a {
+  display: inline-block;
+}
+.b-button--tabkha {
+  @extend .b-button;
+  background: #E5204B;
+}
+.b-button--yasmina {
+  @extend .b-button;
+  background: #E5204B;
+}
+.b-button--3a2ilati {
+  @extend .b-button;
+  background: #E5204B;
+}
+.b-button--mashaheeri {
+  @extend .b-button;
+  background: #E5204B;
+}
+.b-button--warrini {
+  @extend .b-button;
+  background: #E5204B;
+}
+.b-button--mazyun {
+  @extend .b-button;
+  background: #E5204B;
+}

@@ -1,0 +1,37 @@
+.header {
+  display: block;
+  text-align: center;
+  @extend .clearfix;
+  background: #222;
+  height: 64px;
+  @include lineHeight(64px);
+}
+.header-links {
+  li {
+    color:yellow;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    @include fontSize(12px);
+    vertical-align: top;
+    color: #ffcc33;
+    margin: 0 1.5%;
+    letter-spacing: 1px;
+  }
+}
+.header-social {
+  float: left;
+  width: 100px;
+}
+.header-search {
+  float: right;
+  width: 100px;
+}
+.header__logo img {
+  margin-top: 10px;
+}
+.header-social__item {
+  width: 40px;
+  height: 40px;
+  margin:10px;
+}

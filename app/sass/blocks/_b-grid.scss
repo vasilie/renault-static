@@ -1,0 +1,14 @@
+.b-grid__holder {
+  position: absolute;
+  top:0;
+  height: 100%;
+  width: 2800px;
+  // transform:translateX(-50%);
+  // left:50%;
+}
+.b-grid__line {
+  width: 200px;
+  float: left;
+  border-right:1px solid #eee;
+  height: 100%;
+}

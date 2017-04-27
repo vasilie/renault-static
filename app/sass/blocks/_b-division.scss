@@ -1,0 +1,53 @@
+.b-division {
+  display: block;
+  @extend .clearfix;
+}
+.b-division--half {
+  @extend .b-division;
+  margin-bottom: 40%;
+  padding:0 4%;
+  font-family: $text__family--Roboto;
+  @include lineHeight(26px);
+  font-weight: 100;
+  .b-division__item {
+    width: 48%;
+    margin-right:2%;
+    float: left;
+    &:last-child {
+      margin-right: 0;
+      margin-left: 1.8%;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
+  }
+  @include breakpoint(mobile) {
+    padding:0 5%;
+  }
+}
+.b-division--flat .b-division__item{
+  padding:0;
+  margin:0;
+}
+.b-division--30 {
+  @extend .b-division--half;
+  .b-division__item:first-child {
+    width: 30%;
+  }
+  .b-division__item:nth-child(2) {
+    width: 62%;
+    margin-left:5.8%;
+  }
+  @include breakpoint(mobile) {
+    .b-division__item:first-child,
+    .b-division__item:nth-child(2) {
+      width: 100%;
+      padding:0 5%;
+      margin:0;
+    }
+  }
+  @include breakpoint(mobile) {
+    overflow: hidden;
+    margin-bottom: 10%;
+  }
+}

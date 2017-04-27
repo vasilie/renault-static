@@ -1,0 +1,57 @@
+h1 {
+  @include fontSize(47px);
+  @include lineHeight(58px);
+  text-align: center;
+  font-weight: bold;
+  @include breakpoint(mobile) {
+    @include fontSize(23px);
+    @include lineHeight(30px);
+    padding: 0 4%;
+  }
+}
+h2 {
+  text-align: left;
+  display: inline;
+  font-weight: bold;
+  @include fontSize(76px);
+  @include lineHeight(23px);
+  z-index: 1;
+  position: relative;
+  span {
+    @include fontSize(23px);
+    display: block;
+    font-weight: 200;
+  }
+  @include breakpoint(mobile) {
+    @include fontSize(37px);
+    @include lineHeight(15px);
+    margin-bottom: 15%;
+    span {
+      @include fontSize(17px);
+      display: block;
+    }
+  }
+}
+h3 {
+  @include fontSize(32px);
+  @include lineHeight(43px);
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 6%;
+  @include breakpoint(mobile) {
+    @include fontSize(30px);
+    margin-bottom: 22px;
+    @include lineHeight(30px);
+    @include breakpoint(mobile) {
+      padding: 0 5%;
+    }
+  }
+}
+h4 {
+  @include fontSize(23px);
+  font-weight: bold;
+  margin-bottom: 3%;
+}
+strong {
+  font-weight: bold;
+}
