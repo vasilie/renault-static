@@ -3,10 +3,13 @@
   text-align: center;
   @extend .clearfix;
   background: #222;
-  height: 64px;
+  height: 65px;
   @include lineHeight(64px);
+  z-index: 10;
+  position:relative;
 }
 .header-links {
+  display: inline;
   li {
     color:yellow;
     display: inline-block;
@@ -21,7 +24,7 @@
 }
 .header-social {
   float: left;
-  width: 100px;
+  // width: 100px;
 }
 .header-search {
   float: right;
@@ -31,7 +34,30 @@
   margin-top: 10px;
 }
 .header-social__item {
-  width: 40px;
-  height: 40px;
+  width: 23px;
+  height: 45px;
   margin:10px;
+  background-image: url(#{$assetpath}/img/fb-header-ico.png);
+  background-repeat: no-repeat;
+  background-size: 10px;
+  float: left;
+  background-position: center;
+  &.fb {
+    margin-left:21px;
+  }
+  &.yt {
+    background-image: url(#{$assetpath}/img/yt-header-ico.png);
+    background-size: 23px;
+  }
+}
+.header-search {
+  width: 23px;
+  height: 45px;
+  margin:10px;
+  margin-right:33px;
+  float: right;
+  background-image: url(#{$assetpath}/img/header-search-ico.png);
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
 }

@@ -1,6 +1,13 @@
-.main-wrapper {
-  width: 100%;
-  max-width: 1700px;
-  margin: 0 auto;
+.wrapper {
   @extend .clearfix;
+  width: 100%;
+  margin: 0 auto;
+}
+.wrapper--big {
+  @extend .wrapper;
+  max-width: 1700px;
+}
+.wrapper--medium {
+  @extend .wrapper;
+  max-width: 1350px;
 }

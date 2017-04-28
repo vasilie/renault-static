@@ -14,7 +14,12 @@ $assetpath: '../../assets/' !default;
 // @import 'layout/header';
 // @import 'layout/footer';
 
+@import 'core/media-object';
+
+
 @import 'blocks/header';
+@import 'blocks/b-hp-viewer';
+@import 'blocks/b-hp-news';
 // @import 'blocks/b-shapes';
 // @import 'blocks/b-brands';
 // @import 'blocks/b-contact';

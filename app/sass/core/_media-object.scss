@@ -1,0 +1,29 @@
+.media-item {
+  @include fontSize(16px);
+}
+.media-item__media {
+  position: relative;
+  // padding-bottom: 13%;
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+.media-item__content {
+ p {
+   @include fontSize(14px);
+   @include lineHeight(18px);
+   color:#7e7e7e;
+ }
+}
+.media-item__tag {
+  position: absolute;
+  color:#000;
+  bottom:0;
+  background: #ffcc33;
+  @include fontSize(12px);
+  text-transform: uppercase;
+  display: block;
+  padding:14px 26px;
+  // transform:translateY(-100%);
+}

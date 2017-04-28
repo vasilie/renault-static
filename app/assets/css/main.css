@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900");
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700,500,300);
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i");
@@ -54,7 +55,7 @@ table {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.clearfix:after, .main-wrapper:after, .header:after {
+.clearfix:after, .wrapper:after, .wrapper--big:after, .wrapper--medium:after, .header:after {
   content: "";
   display: table;
   clear: both; }
@@ -62,6 +63,13 @@ table {
 a:hover, a:active, a:focus {
   outline: none;
   color: inherit; }
+
+@font-face {
+  font-family: 'Airways';
+  src: url(../../assets//font/airways.ttf);
+  /* IE9 Compat Modes */
+  src: url(../../assets//font/airways.ttf) format("truetype"), url("webfont.woff2") format("woff2"), url("webfont.woff") format("woff"), url("webfont.ttf") format("truetype"), url("webfont.svg#svgFontName") format("svg");
+  /* Legacy iOS */ }
 
 html {
   -webkit-font-smoothing: antialiased;
@@ -109,104 +117,93 @@ body {
 .no-scroll {
   overflow: hidden; }
 
-h1 {
-  font-size: 47px;
-  font-size: 2.9375rem;
-  line-height: 58px;
-  line-height: 3.625rem;
-  text-align: center;
-  font-weight: bold; }
-  @media (max-width: 700px) {
-    h1 {
-      font-size: 23px;
-      font-size: 1.4375rem;
-      line-height: 30px;
-      line-height: 1.875rem;
-      padding: 0 4%; } }
-
 h2 {
-  text-align: left;
-  display: inline;
-  font-weight: bold;
-  font-size: 76px;
-  font-size: 4.75rem;
-  line-height: 23px;
-  line-height: 1.4375rem;
-  z-index: 1;
-  position: relative; }
-  h2 span {
-    font-size: 23px;
-    font-size: 1.4375rem;
-    display: block;
-    font-weight: 200; }
-  @media (max-width: 700px) {
-    h2 {
-      font-size: 37px;
-      font-size: 2.3125rem;
-      line-height: 15px;
-      line-height: 0.9375rem;
-      margin-bottom: 15%; }
-      h2 span {
-        font-size: 17px;
-        font-size: 1.0625rem;
-        display: block; } }
-
-h3 {
+  text-transform: uppercase;
   font-size: 32px;
-  font-size: 2rem;
-  line-height: 43px;
-  line-height: 2.6875rem;
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 6%; }
-  @media (max-width: 700px) {
-    h3 {
-      font-size: 30px;
-      font-size: 1.875rem;
-      margin-bottom: 22px;
-      line-height: 30px;
-      line-height: 1.875rem; } }
-  @media (max-width: 700px) and (max-width: 700px) {
-    h3 {
-      padding: 0 5%; } }
+  font-size: 2rem; }
+  h2 strong {
+    font-weight: 900; }
+  h2 span {
+    font-family: "Airways", sans-serif;
+    text-transform: lowercase;
+    font-size: 30px;
+    font-size: 1.875rem; }
 
 h4 {
-  font-size: 23px;
-  font-size: 1.4375rem;
-  font-weight: bold;
-  margin-bottom: 3%; }
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 26px;
+  line-height: 1.625rem;
+  font-weight: 900;
+  margin-bottom: 18px; }
 
 strong {
   font-weight: bold; }
 
-.main-wrapper {
+.wrapper, .wrapper--big, .wrapper--medium {
   width: 100%;
-  max-width: 1700px;
   margin: 0 auto; }
+
+.wrapper--big {
+  max-width: 1700px; }
+
+.wrapper--medium {
+  max-width: 1350px; }
+
+.media-item {
+  font-size: 16px;
+  font-size: 1rem; }
+
+.media-item__media {
+  position: relative; }
+  .media-item__media img {
+    width: 100%;
+    display: block; }
+
+.media-item__content p {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 18px;
+  line-height: 1.125rem;
+  color: #7e7e7e; }
+
+.media-item__tag {
+  position: absolute;
+  color: #000;
+  bottom: 0;
+  background: #ffcc33;
+  font-size: 12px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  display: block;
+  padding: 14px 26px; }
 
 .header {
   display: block;
   text-align: center;
   background: #222;
-  height: 64px;
+  height: 65px;
   line-height: 64px;
-  line-height: 4rem; }
+  line-height: 4rem;
+  z-index: 10;
+  position: relative; }
 
-.header-links li {
-  color: yellow;
-  display: inline-block;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 12px;
-  font-size: 0.75rem;
-  vertical-align: top;
-  color: #ffcc33;
-  margin: 0 1.5%;
-  letter-spacing: 1px; }
+.header-links {
+  display: inline; }
+  .header-links li {
+    color: yellow;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    font-size: 0.75rem;
+    vertical-align: top;
+    color: #ffcc33;
+    margin: 0 1.5%;
+    letter-spacing: 1px; }
 
 .header-social {
-  float: left;
-  width: 100px; }
+  float: left; }
 
 .header-search {
   float: right;
@@ -216,6 +213,88 @@ strong {
   margin-top: 10px; }
 
 .header-social__item {
-  width: 40px;
-  height: 40px;
-  margin: 10px; }
+  width: 23px;
+  height: 45px;
+  margin: 10px;
+  background-image: url(../../assets//img/fb-header-ico.png);
+  background-repeat: no-repeat;
+  background-size: 10px;
+  float: left;
+  background-position: center; }
+  .header-social__item.fb {
+    margin-left: 21px; }
+  .header-social__item.yt {
+    background-image: url(../../assets//img/yt-header-ico.png);
+    background-size: 23px; }
+
+.header-search {
+  width: 23px;
+  height: 45px;
+  margin: 10px;
+  margin-right: 33px;
+  float: right;
+  background-image: url(../../assets//img/header-search-ico.png);
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center; }
+
+.b-hp-viewer {
+  display: block; }
+  .b-hp-viewer img {
+    display: block; }
+
+.b-hp-news {
+  display: block;
+  position: relative; }
+
+.b-hp-news__left,
+.b-hp-news__right {
+  width: 49.3%;
+  margin-right: 0.7%;
+  float: left; }
+
+.b-hp-news__right {
+  width: 49.3%;
+  margin-right: 0;
+  margin-left: 0.7%; }
+
+.b-hp-news__item {
+  float: left;
+  width: 50%; }
+  .b-hp-news__item h2 {
+    margin-bottom: 72%; }
+
+.b-hp-news__item--A {
+  padding-top: 35.3%;
+  width: 35%;
+  margin-right: 4%; }
+  .b-hp-news__item--A .media-item__media {
+    margin-bottom: 12%; }
+
+.b-hp-news__item--B {
+  padding-top: 36.2%;
+  width: 60.5%; }
+  .b-hp-news__item--B .media-item__media {
+    margin-bottom: 7%; }
+
+.b-hp-news__item--C {
+  padding-top: 11.4%;
+  width: 100%;
+  margin-bottom: 17.6%; }
+  .b-hp-news__item--C .media-item__media {
+    margin-bottom: 4%; }
+    .b-hp-news__item--C .media-item__media img {
+      width: 87%; }
+
+.b-hp-news__item--D {
+  width: 100%;
+  margin-bottom: 17.6%; }
+  .b-hp-news__item--D .media-item__media {
+    width: 48.2%;
+    margin-right: 4%;
+    float: left;
+    margin-bottom: 4%; }
+  .b-hp-news__item--D .media-item__content {
+    float: left;
+    width: 42%;
+    margin-left: 0; }
