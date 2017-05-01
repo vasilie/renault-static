@@ -22,8 +22,10 @@
   bottom:0;
   background: #ffcc33;
   @include fontSize(12px);
+  font-weight:bold;
   text-transform: uppercase;
   display: block;
   padding:14px 26px;
+  // letter-spacing:1px;
   // transform:translateY(-100%);
 }

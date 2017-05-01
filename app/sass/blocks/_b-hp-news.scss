@@ -1,6 +1,7 @@
 .b-hp-news {
   display: block;
   position: relative;
+  @extend .clearfix;
 }
 .b-hp-news__left,
 .b-hp-news__right {
@@ -50,7 +51,7 @@
 }
 .b-hp-news__item--D {
   width: 100%;
-  margin-bottom: 17.6%;
+  margin-bottom: 6.6%;
   // margin-right: 4%;
   .media-item__media {
     width: 48.2%;

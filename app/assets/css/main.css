@@ -55,7 +55,7 @@ table {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.clearfix:after, .wrapper:after, .wrapper--big:after, .wrapper--medium:after, .header:after {
+.clearfix:after, .wrapper:after, .wrapper--big:after, .wrapper--medium:after, .header:after, .b-hp-news:after, .b-hp-fan:after, .b-hp-fan__teaser:after {
   content: "";
   display: table;
   clear: both; }
@@ -129,6 +129,14 @@ h2 {
     font-size: 30px;
     font-size: 1.875rem; }
 
+h3 {
+  font-size: 31px;
+  font-size: 1.9375rem;
+  line-height: 31px;
+  line-height: 1.9375rem;
+  margin-bottom: 11%;
+  font-weight: 900; }
+
 h4 {
   font-size: 18px;
   font-size: 1.125rem;
@@ -148,7 +156,8 @@ strong {
   max-width: 1700px; }
 
 .wrapper--medium {
-  max-width: 1350px; }
+  max-width: 1400px;
+  padding: 0 25px; }
 
 .media-item {
   font-size: 16px;
@@ -174,6 +183,7 @@ strong {
   background: #ffcc33;
   font-size: 12px;
   font-size: 0.75rem;
+  font-weight: bold;
   text-transform: uppercase;
   display: block;
   padding: 14px 26px; }
@@ -243,6 +253,9 @@ strong {
   .b-hp-viewer img {
     display: block; }
 
+.b-hp-viewer__item img {
+  width: 100%; }
+
 .b-hp-news {
   display: block;
   position: relative; }
@@ -288,7 +301,7 @@ strong {
 
 .b-hp-news__item--D {
   width: 100%;
-  margin-bottom: 17.6%; }
+  margin-bottom: 6.6%; }
   .b-hp-news__item--D .media-item__media {
     width: 48.2%;
     margin-right: 4%;
@@ -298,3 +311,45 @@ strong {
     float: left;
     width: 42%;
     margin-left: 0; }
+
+.b-button {
+  text-align: center;
+  display: inline-block;
+  padding: 20px 26px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0px 16px 37px 3px rgba(0, 0, 0, 0.3);
+  margin-bottom: 9.2%; }
+
+.b-hp-fan {
+  display: block;
+  background: #dedede;
+  padding: 7.3% 6.3%; }
+
+.b-hp-fan__teaser {
+  display: block;
+  background: #fff; }
+
+.b-hp-fan__teaser__media {
+  display: block;
+  width: 70.5%;
+  float: left; }
+  .b-hp-fan__teaser__media img {
+    display: block;
+    width: 100%; }
+
+.b-hp-fan__teaser__content {
+  background: #fff;
+  width: 29.5%;
+  float: left;
+  padding: 3.9% 5.6% 3.9% 7.6%; }
+  .b-hp-fan__teaser__content h2 {
+    margin-bottom: 30%; }
+  .b-hp-fan__teaser__content p {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 18px;
+    line-height: 1.125rem;
+    color: #7e7e7e; }

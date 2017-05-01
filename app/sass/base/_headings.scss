@@ -13,6 +13,12 @@ h2 {
     @include fontSize(30px);
   }
 }
+h3 {
+  @include fontSize(31px);
+  @include lineHeight(31px);
+  margin-bottom: 11%;
+  font-weight: 900;
+}
 h4 {
   @include fontSize(18px);
   @include lineHeight(26px);
