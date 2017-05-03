@@ -1,0 +1,33 @@
+.b-hp-business {
+  h2 {
+    width: 100%;
+    margin-bottom: 4.7%;
+  }
+}
+.b-hp-business__item {
+  float: left;
+  width: 25%;
+}
+.b-hp-business__item--A {
+  @extend .b-hp-business__item;
+  width: 23.6%;
+  margin-right: 1.7%;
+}
+.b-hp-business__item--B {
+  @extend .b-hp-business__item;
+  width: 23.5%;
+}
+.b-hp-business__item--C {
+  @extend .b-hp-business__item;
+  margin-top:-6%;
+}
+.b-hp-business__item--D {
+  @extend .b-hp-business__item;
+  margin-top:-6%;
+}
+.b-hp-business__item--E {
+  @extend .b-hp-business__item;
+}
+.b-hp-business__item--F {
+  @extend .b-hp-business__item;
+}

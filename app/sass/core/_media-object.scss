@@ -29,3 +29,12 @@
   // letter-spacing:1px;
   // transform:translateY(-100%);
 }
+.media-item__content--fluid {
+  position: relative;
+  @extend .media-item__content;
+  .fluid {
+    position: absolute;
+    top:0;
+    left:0;
+  }
+}

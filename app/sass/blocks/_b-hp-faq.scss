@@ -1,0 +1,19 @@
+.b-hp-faq {
+  h2 {
+    width: 19.2%;
+    float: left;
+  }
+}
+.b-hp-faq__item {
+  width: 74.4%;
+  float: left;
+  .media-item__media {
+    width: 49%;
+    float: left;
+  }
+  .media-item__content {
+    width: 49%;
+    padding: 15% 2.3%;
+    float: left;
+  }
+}

@@ -32,3 +32,23 @@
     color:#7e7e7e;
   }
 }
+.b-hp-fan__list {
+  @extend .clearfix;
+  display: block;
+  background: white;
+  padding-left: 14.6%;
+  padding-top:5.8%;
+}
+.b-hp-fan__list__item {
+  width: 31.6%;
+  float:right;
+  // margin-left: 2.7%;
+  &:nth-child(2){
+    margin-left: 2.7%;
+    margin-right: 2.5%;
+
+  }
+  .media-item__content {
+    padding-top:8.2%;
+  }
+}
