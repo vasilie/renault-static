@@ -1,0 +1,30 @@
+.s-teaser-slider {
+  width: 100%;
+  position: relative;
+  img {
+    width: 100%;
+  }
+}
+.s-teaser-slider__item__media {
+}
+.s-teaser-slider__item__content {
+  h3 {
+    color: white;
+    @include lineHeight(34px);
+    margin-bottom: 6%;
+  }
+  p {
+    margin-bottom: 19%;
+  }
+  position: absolute;
+  width: 260px;
+  top: 16%;
+  left: 10%;
+}
+.s-teaser-slider__pre-heading {
+  font-family:$text__family--Airways;
+  @include fontSize(30px);
+  color: #ffcc33;
+  margin-bottom: 5.1%;
+  display: block;
+}

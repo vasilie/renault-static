@@ -1,0 +1,45 @@
+.b-test-teaser {
+  display: block;
+  position: relative;
+  margin-bottom: 10%;
+  img {
+    display: block;
+    width: 100%;
+  }
+  text-align: center;
+}
+.b-test-teaser__trucks {
+  width: 100%;
+  margin:0 auto;
+  text-align: center;
+}
+.b-test-teaser__trucks__item {
+  display: inline-block;
+  margin:-6.9% 0% 0;
+  &:nth-child(2){
+    margin-left: 7.9%;
+    margin-right: 7.9%;
+  }
+  h5 {
+    @include fontSize(22px);
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+  p {
+    color: #000;
+  }
+}
+.b-test-teaser__content {
+  position: absolute;
+  width: 300px;
+  left:50%;
+  transform:translateX(-50%);
+  text-align: left;
+  margin-top: 7%;
+  h2 {
+    margin-bottom: 7%;
+  }
+  p {
+    margin-bottom: 3%;
+  }
+}

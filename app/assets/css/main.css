@@ -83,6 +83,13 @@ html {
     html {
       font-size: 16px; } }
 
+p {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 18px;
+  line-height: 1.125rem;
+  color: #7e7e7e; }
+
 body {
   position: relative; }
 
@@ -438,7 +445,7 @@ strong {
   width: 100%;
   margin-bottom: 4.7%; }
 
-.b-hp-business__item, .b-hp-business__item--A, .b-hp-business__item--B, .b-hp-business__item--C, .b-hp-business__item--D, .b-hp-business__item--E, .b-hp-business__item--F {
+.b-hp-business__item, .b-hp-business__item--A, .b-hp-business__item--B, .b-hp-business__item--C, .b-hp-business__item--D, .b-hp-business__item--E, .b-hp-business__item--F, .b-hp-business__item--G {
   float: left;
   width: 25%; }
 
@@ -447,10 +454,139 @@ strong {
   margin-right: 1.7%; }
 
 .b-hp-business__item--B {
-  width: 23.5%; }
+  width: 23.8%;
+  margin-right: 1.7%; }
 
 .b-hp-business__item--C {
-  margin-top: -6%; }
+  margin-top: -8.6%;
+  width: 23.8%;
+  margin-right: 1.7%;
+  margin-bottom: 18.5%; }
 
 .b-hp-business__item--D {
-  margin-top: -6%; }
+  margin-top: -8.6%;
+  width: 23.7%; }
+
+.b-hp-business__item--E {
+  width: 23.6%;
+  margin-right: 1.9%;
+  margin-top: -12.5%; }
+
+.b-hp-business__item--F {
+  width: 23.6%;
+  margin-right: 1.7%; }
+
+.b-hp-business__item--G {
+  width: 49.2%;
+  border: 24px solid #ffcc33; }
+
+.b-test-teaser {
+  display: block;
+  position: relative;
+  margin-bottom: 10%;
+  text-align: center; }
+  .b-test-teaser img {
+    display: block;
+    width: 100%; }
+
+.b-test-teaser__trucks {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center; }
+
+.b-test-teaser__trucks__item {
+  display: inline-block;
+  margin: -6.9% 0% 0; }
+  .b-test-teaser__trucks__item:nth-child(2) {
+    margin-left: 7.9%;
+    margin-right: 7.9%; }
+  .b-test-teaser__trucks__item h5 {
+    font-size: 22px;
+    font-size: 1.375rem;
+    font-weight: 900;
+    text-transform: uppercase; }
+  .b-test-teaser__trucks__item p {
+    color: #000; }
+
+.b-test-teaser__content {
+  position: absolute;
+  width: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: left;
+  margin-top: 7%; }
+  .b-test-teaser__content h2 {
+    margin-bottom: 7%; }
+  .b-test-teaser__content p {
+    margin-bottom: 3%; }
+
+.b-most-read {
+  width: 100%;
+  display: block; }
+  .b-most-read h2 {
+    width: 20.6%;
+    float: left; }
+
+.b-most-read__slider {
+  width: 76%;
+  float: left; }
+
+.b-most-read__slider__item {
+  width: 22.8%;
+  display: inline-block;
+  margin: 0 1%; }
+  .b-most-read__slider__item img {
+    width: 100%;
+    margin-bottom: 9%; }
+  .b-most-read__slider__item p {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 20px;
+    line-height: 1.25rem;
+    color: #000; }
+  .b-most-read__slider__item:first-child {
+    margin-left: 0; }
+  .b-most-read__slider__item:last-child {
+    margin-right: 0; }
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding-top: 4%;
+  background: #f6f6f6; }
+
+.footer-links__item {
+  display: inline-block;
+  font-size: 10px;
+  font-size: 0.625rem;
+  color: #8b8b8b;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1.5% 0.8%; }
+
+.s-teaser-slider {
+  width: 100%;
+  position: relative; }
+  .s-teaser-slider img {
+    width: 100%; }
+
+.s-teaser-slider__item__content {
+  position: absolute;
+  width: 260px;
+  top: 16%;
+  left: 10%; }
+  .s-teaser-slider__item__content h3 {
+    color: white;
+    line-height: 34px;
+    line-height: 2.125rem;
+    margin-bottom: 6%; }
+  .s-teaser-slider__item__content p {
+    margin-bottom: 19%; }
+
+.s-teaser-slider__pre-heading {
+  font-family: "Airways", sans-serif;
+  font-size: 30px;
+  font-size: 1.875rem;
+  color: #ffcc33;
+  margin-bottom: 5.1%;
+  display: block; }

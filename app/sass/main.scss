@@ -2,11 +2,11 @@ $assetpath: '../../assets/' !default;
 
 @import 'base/reset';
 @import 'base/breakpoints';
+@import 'base/functions';
+@import 'base/mixins';
 @import 'base/typography';
 @import 'base/init';
 @import 'base/helpers';
-@import 'base/functions';
-@import 'base/mixins';
 @import 'base/headings';
 
 @import 'layout/main-layout';
@@ -25,6 +25,12 @@ $assetpath: '../../assets/' !default;
 @import 'blocks/b-hp-vu';
 @import 'blocks/b-hp-faq';
 @import 'blocks/b-hp-business';
+@import 'blocks/b-test-teaser';
+@import 'blocks/b-most-read';
+@import 'blocks/footer';
+
+
+@import 'sliders/s-teaser-slider';
 // @import 'blocks/b-division';
 // @import 'blocks/b-header-slider';
 // @import 'blocks/b-audience';

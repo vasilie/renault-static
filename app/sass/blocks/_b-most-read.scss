@@ -1,0 +1,32 @@
+.b-most-read {
+  width: 100%;
+  display: block;
+  h2 {
+    width: 20.6%;
+    float: left;
+  }
+}
+.b-most-read__slider {
+  width: 76%;
+  float: left;
+}
+.b-most-read__slider__item {
+  width: 22.8%;
+  display: inline-block;
+  margin:0 1%;
+  img {
+    width: 100%;
+    margin-bottom: 9%;
+  }
+  p {
+    @include fontSize(16px);
+    @include lineHeight(20px);
+    color:#000;
+  }
+  &:first-child {
+    margin-left:0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}

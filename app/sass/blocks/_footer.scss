@@ -1,0 +1,14 @@
+footer {
+  width: 100%;
+  text-align: center;
+  padding-top:4%;
+  background: #f6f6f6;
+}
+.footer-links__item {
+  display: inline-block;
+  @include fontSize(10px);
+  color:#8b8b8b;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1.5% 0.8%
+}
