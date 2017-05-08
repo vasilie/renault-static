@@ -1,13 +1,19 @@
 .b-hp-fan {
   display:block;
-  background:#dedede;
   padding: 7.3% 6.3%;
+  position: relative;
   @extend .clearfix;
+  @include breakpoint(mobile) {
+    padding:0;
+  }
 }
 .b-hp-fan__teaser {
   display:block;
   background: #fff;
   @extend .clearfix;
+  box-shadow: 0px 56px 100px 3px rgba(0,0,0,0.4);
+  z-index: 21;
+  position: relative;
 }
 .b-hp-fan__teaser__media {
   display:block;
@@ -17,38 +23,90 @@
     display: block;
     width:100%;
   }
+  @include breakpoint(tablet) {
+    width: 67.9%;
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
 }
 .b-hp-fan__teaser__content {
   background:#fff;
   width: 29.5%;
   float:left;
-  padding: 3.9% 5.6% 3.9% 7.6%;
+  padding: 3.9% 2.6% 3.9% 7.6%;
   h2 {
     margin-bottom: 30%;
+  }
+  h3 {
+    @include breakpoint(tablet) {
+      @include fontSize(17px);
+      @include lineHeight(20px);
+    }
   }
   p {
     @include fontSize(14px);
     @include lineHeight(18px);
     color:#7e7e7e;
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+  @include breakpoint(tablet) {
+    padding: 5.9% 2.6% 3.9% 7.6%;
+    width: 32.1%;
+    h2 {
+      margin-bottom: 6%;
+    }
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+    padding: 6.1% 2.6% 1.9% 10%;
   }
 }
 .b-hp-fan__list {
   @extend .clearfix;
   display: block;
-  background: white;
+  // background: white;
   padding-left: 14.6%;
   padding-top:5.8%;
+  @include breakpoint(mobile) {
+    padding:0;
+    padding-top:12%;
+  }
 }
 .b-hp-fan__list__item {
   width: 31.6%;
+  z-index: 22;
+  position: relative;
   float:right;
   // margin-left: 2.7%;
   &:nth-child(2){
     margin-left: 2.7%;
     margin-right: 2.5%;
+    @include breakpoint(mobile) {
+      margin-left:2%;
+      margin-right: 0;
+    }
 
   }
   .media-item__content {
-    padding-top:8.2%;
+  }
+  @include breakpoint(mobile) {
+    width: 49%;
+    float: left;
+    margin-bottom: 9.9%;
+  }
+}
+.b-hp-fan__bck {
+  background:#dedede;
+  position: absolute;
+  height: 61%;
+  width:100%;
+  z-index: -1;
+  left:0;
+  top:0;
+  @include breakpoint(mobile) {
+    display: none;
   }
 }

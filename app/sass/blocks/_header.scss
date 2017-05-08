@@ -7,6 +7,9 @@
   @include lineHeight(64px);
   z-index: 10;
   position:relative;
+  @include breakpoint(tablet) {
+    display: none;
+  }
 }
 .header-links {
   display: inline;
@@ -30,8 +33,12 @@
   float: right;
   width: 100px;
 }
+li.header__logo {
+  width: 12%;
+}
 .header__logo img {
   margin-top: 10px;
+  width: 100%;
 }
 .header-social__item {
   width: 23px;

@@ -6,10 +6,10 @@
      @media (max-width: 1600px)  { @content ; }
   }
   @if $point == mobile {
-     @media (max-width: 700px)  { @content ; }
+     @media (max-width: 768px)  { @content ; }
   }
   @if $point == tablet {
-     @media (max-width: 1025px)  { @content ; }
+     @media (max-width: 1023px)  { @content ; }
   }
   @if $point == laptop {
      @media (max-width: 1450px)  { @content ; }

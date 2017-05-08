@@ -8,4 +8,12 @@
   font-weight: 700;
   box-shadow: 0px 16px 37px 3px rgba(0,0,0,0.3);
   margin-bottom: 9.2%;
+  @include breakpoint(tablet) {
+    padding: 19px 21px;
+    @include fontSize(11px);
+  }
+  @include breakpoint(mobile) {
+    @include fontSize(8px);
+    padding: 11px 11px;
+  }
 }

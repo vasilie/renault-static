@@ -11,4 +11,10 @@
   @extend .wrapper;
   max-width: 1400px;
   padding: 0 25px;
+  @include breakpoint(tablet) {
+    padding: 0 60px;
+  }
+  @include breakpoint(mobile) {
+    padding: 0 6%;
+  }
 }

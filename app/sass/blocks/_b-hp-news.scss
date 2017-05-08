@@ -8,17 +8,46 @@
   width: 49.3%;
   margin-right: 0.7%;
   float: left;
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
 }
 .b-hp-news__right {
   width: 49.3%;
   margin-right: 0;
   margin-left: 0.7%;
+  @include breakpoint(tablet) {
+    width: 42.4%;
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
+}
+.b-hp-news__left {
+  @include breakpoint(tablet) {
+    width: 56%;
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
 }
 .b-hp-news__item {
   float: left;
   width: 50%;
   h2 {
     margin-bottom: 72%;
+    @include breakpoint(tablet) {
+      margin-bottom: 22%;
+    }
+    @include breakpoint(mobile) {
+      width: 56%;
+      @include fontSize(22px);
+      margin-bottom: 13%;
+      span {
+        @include fontSize(26px);
+        @include lineHeight(18px);
+      }
+    }
   }
 }
 .b-hp-news__item--A {
@@ -26,7 +55,15 @@
   width: 35%;
   margin-right: 4%;
   .media-item__media {
-    margin-bottom: 12%;
+  }
+  @include breakpoint(tablet) {
+    width: 42%;
+    padding-top:26.3%;
+    margin-right: 3%;
+  }
+  @include breakpoint(mobile) {
+    padding-top: 11.9%;
+    width: 36%;
   }
 }
 .b-hp-news__item--B {
@@ -34,7 +71,15 @@
   width: 60.5%;
   // margin-right: 4%;
   .media-item__media {
-    margin-bottom: 7%;
+    // margin-bottom: 7%;
+  }
+  @include breakpoint(tablet) {
+    padding-top: 31.2%;
+    width: 53.7%;
+  }
+  @include breakpoint(mobile) {
+    padding-top: 7.2%;
+    width: 60.7%;
   }
 }
 .b-hp-news__item--C {
@@ -42,11 +87,28 @@
   width: 100%;
   margin-bottom: 17.6%;
   // margin-right: 4%;
+  .media-item__content {
+    padding-top: 16%;
+  }
   .media-item__media {
-    margin-bottom: 4%;
+    // margin-bottom: 4%;
     img {
       width: 87%;
+      @include breakpoint(tablet) {
+        width: 100%;
+      }
     }
+  }
+
+  @include breakpoint(tablet) {
+    padding-top: 9.7%;
+    .media-item__content {
+      padding-top: 16%;
+    }
+  }
+  @include breakpoint(mobile) {
+    padding-top: 7.7%;
+    margin-bottom: 11.6%;
   }
 }
 .b-hp-news__item--D {
@@ -57,11 +119,27 @@
     width: 48.2%;
     margin-right: 4%;
     float: left;
-    margin-bottom: 4%;
+    // margin-bottom: 4%;
+    @include breakpoint(tablet) {
+      width: 56.2%;
+    }
+    @include breakpoint(mobile) {
+      width: 48.2%;
+    }
   }
   .media-item__content {
     float: left;
     width:42%;
     margin-left:0;
+    @include breakpoint(tablet) {
+      width: 37%;
+      padding-top:0;
+    }
+  }
+  @include breakpoint(tablet) {
+    margin-bottom: 19.6%;
+  }
+  @include breakpoint(mobile) {
+    margin-bottom: 11.6%;
   }
 }

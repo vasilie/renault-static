@@ -10,10 +10,21 @@
   }
 }
 .media-item__content {
+  padding-top:25px;
  p {
    @include fontSize(14px);
    @include lineHeight(18px);
    color:#7e7e7e;
+   @include breakpoint(tablet) {
+    display: none;
+   }
+ }
+
+ @include breakpoint(tablet) {
+   padding-top:10px;
+ }
+ @include breakpoint(mobile) {
+   padding-top:7px;
  }
 }
 .media-item__tag {
@@ -26,8 +37,14 @@
   text-transform: uppercase;
   display: block;
   padding:14px 26px;
-  // letter-spacing:1px;
-  // transform:translateY(-100%);
+  @include breakpoint(tablet) {
+    padding: 8px 11px;
+    @include fontSize(8px);
+  }
+  @include breakpoint(mobile) {
+    @include fontSize(6px);
+    padding: 6px 10px;
+  }
 }
 .media-item__content--fluid {
   position: relative;
@@ -36,5 +53,9 @@
     position: absolute;
     top:0;
     left:0;
+    padding-top:25px;
+    @include breakpoint(tablet) {
+      padding-top:10px;
+    }
   }
 }

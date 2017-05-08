@@ -11,6 +11,12 @@ h2 {
     font-family: $text__family--Airways;
     text-transform: lowercase;
     @include fontSize(30px);
+    @include breakpoint(tablet) {
+      @include fontSize(20px);
+    }
+  }
+  @include breakpoint(tablet) {
+    @include fontSize(20px);
   }
 }
 h3 {
@@ -24,6 +30,14 @@ h4 {
   @include lineHeight(26px);
   font-weight: 900;
   margin-bottom: 18px;
+  @include breakpoint(tablet) {
+    @include fontSize(15px);
+    @include lineHeight(20px);
+  }
+  @include breakpoint(mobile) {
+    @include fontSize(14px);
+    @include lineHeight(16px);
+  }
 }
 strong {
   font-weight: bold;
