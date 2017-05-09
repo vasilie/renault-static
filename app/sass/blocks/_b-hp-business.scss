@@ -1,4 +1,5 @@
 .b-hp-business {
+  @extend .clearfix;
   h2 {
     width: 100%;
     margin-bottom: 4.7%;
@@ -12,11 +13,19 @@
   @extend .b-hp-business__item;
   width: 23.6%;
   margin-right: 1.7%;
+  @include breakpoint(mobile){
+    width: 48.6%;
+    margin-right: 2.7%;
+  }
 }
 .b-hp-business__item--B {
   @extend .b-hp-business__item;
   width: 23.8%;
   margin-right:1.7%;
+  @include breakpoint(mobile){
+    width: 48.4%;
+    margin-right: 0;
+  }
 }
 .b-hp-business__item--C {
   @extend .b-hp-business__item;
@@ -24,27 +33,54 @@
   width: 23.8%;
   margin-right: 1.7%;
   margin-bottom: 18.5%;
+  @include breakpoint(tablet){
+    margin-bottom: 9.5%;
+  }
+  @include breakpoint(mobile){
+    margin-top: -11.6%;
+    width: 48.5%;
+    margin-right: 2.9%;
+  }
 }
 .b-hp-business__item--D {
   @extend .b-hp-business__item;
   margin-top:-8.6%;
   width: 23.7%;
+  @include breakpoint(mobile){
+    margin-top: 12.4%;
+    width: 48.4%;
+  }
 }
 .b-hp-business__item--E {
   @extend .b-hp-business__item;
   width: 23.6%;
   margin-right: 1.9%;
   margin-top:-12.5%;
-
+  @include breakpoint(tablet){
+    margin-top: -7.5%;
+  }
+  @include breakpoint(mobile){
+    margin-top: 0;
+    width: 48.7%;
+    margin-right: 2.6%;
+  }
 }
 .b-hp-business__item--F {
   @extend .b-hp-business__item;
   width: 23.6%;
   margin-right: 1.7%;
+  @include breakpoint(mobile){
+    width: 48.5%;
+    margin-right: 0;
+  }
 }
 .b-hp-business__item--G {
   @extend .b-hp-business__item;
   width: 49.2%;
   border:24px solid #ffcc33;
-
+  @include breakpoint(mobile){
+    width: 100%;
+    margin-top: 17%;
+    border: 11px solid #ffcc33;
+  }
 }

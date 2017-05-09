@@ -3,10 +3,10 @@
      @media (max-width: 600px)  { @content ; }
   }
   @if $point == typoMax {
-     @media (max-width: 1600px)  { @content ; }
+     @media (max-width: 1700px)  { @content ; }
   }
   @if $point == mobile {
-     @media (max-width: 768px)  { @content ; }
+     @media (max-width: 767px)  { @content ; }
   }
   @if $point == tablet {
      @media (max-width: 1023px)  { @content ; }

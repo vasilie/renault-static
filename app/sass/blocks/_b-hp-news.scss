@@ -29,6 +29,7 @@
   }
   @include breakpoint(mobile) {
     width: 100%;
+
   }
 }
 .b-hp-news__item {
@@ -54,16 +55,30 @@
   padding-top:35.3%;
   width: 35%;
   margin-right: 4%;
+  h2 {
+    position:absolute;
+  }
   .media-item__media {
+    padding-top: 99%;
+
+
   }
   @include breakpoint(tablet) {
     width: 42%;
     padding-top:26.3%;
     margin-right: 3%;
+    .media-item__media {
+      padding-top: 49%;
+    }
   }
   @include breakpoint(mobile) {
-    padding-top: 11.9%;
+    position:relative;
+    padding-top: 12%;
     width: 36%;
+    .media-item__media {
+      margin-top: 80%;
+      padding-top: 0;
+    }
   }
 }
 .b-hp-news__item--B {
@@ -78,8 +93,8 @@
     width: 53.7%;
   }
   @include breakpoint(mobile) {
-    padding-top: 7.2%;
     width: 60.7%;
+    padding-top: 8%;
   }
 }
 .b-hp-news__item--C {
@@ -113,7 +128,7 @@
 }
 .b-hp-news__item--D {
   width: 100%;
-  margin-bottom: 6.6%;
+  margin-bottom: 10.6%;
   // margin-right: 4%;
   .media-item__media {
     width: 48.2%;
@@ -128,6 +143,7 @@
     }
   }
   .media-item__content {
+    padding-top:0;
     float: left;
     width:42%;
     margin-left:0;
