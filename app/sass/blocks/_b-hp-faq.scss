@@ -1,4 +1,6 @@
 .b-hp-faq {
+  // display: none;
+  overflow: hidden;
   h2 {
     width: 19.2%;
     float: left;
@@ -16,4 +18,8 @@
     padding: 15% 2.3%;
     float: left;
   }
+}
+.b-hp-faq__slider {
+  display: block;
+  overflow: hidden;
 }

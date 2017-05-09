@@ -30,6 +30,7 @@
 .b-most-read__slider__item {
   width: 22.8%;
   display: inline-block;
+  vertical-align: top;
   margin:0 1%;
   img {
     width: 100%;
@@ -45,6 +46,12 @@
   }
   &:last-child {
     margin-right: 0;
+  }
+  &:nth-child(5),
+  &:nth-child(6),
+  &:nth-child(7),
+  &:nth-child(8) {
+    display: none;
   }
   @include breakpoint(tablet){
     p {

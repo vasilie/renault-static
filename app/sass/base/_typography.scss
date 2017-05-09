@@ -13,14 +13,13 @@ $base__line: 20 !default;
 @import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i');
 @font-face {
   font-family: 'Airways';
-  src: url(#{$assetpath}/font/airways.ttf); /* IE9 Compat Modes */
-  src: url(#{$assetpath}/font/airways.ttf) format('truetype'), /* IE6-IE8 */
+  src: url(#{$path-fonts}/airways.ttf); /* IE9 Compat Modes */
+  src: url(#{$path-fonts}/airways.ttf) format('truetype'), /* IE6-IE8 */
        url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
        url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
        url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
-
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
