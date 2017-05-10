@@ -1,3 +1,14 @@
+.header-opened {
+  .main-content {
+    @include breakpoint(tablet) {
+      position: relative;
+      left: 71%;
+    }
+  }
+  .main-content__mask {
+    display: block;
+  }
+}
 .wrapper {
   @extend .clearfix;
   width: 100%;
@@ -17,4 +28,13 @@
   @include breakpoint(mobile) {
     padding: 0 6%;
   }
+}
+.main-content__mask {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #000;
+  z-index: 22;
+  opacity: 0.7;
+  display: none;
 }

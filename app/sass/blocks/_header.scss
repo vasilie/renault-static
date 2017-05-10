@@ -5,7 +5,7 @@
   left:50%;
   transform:translateX(-50%);
   @extend .clearfix;
-  background: #222;
+  background: #000;
   height: 65px;
   @include lineHeight(64px);
   z-index: 50;
@@ -13,7 +13,11 @@
   width: 100%;
   @include breakpoint(tablet) {
     // display: none;
+    z-index: 9999;
     height: 83px;
+  }
+  @include breakpoint(mobile) {
+    height: 42px;
   }
 }
 .header-links {
@@ -29,13 +33,14 @@
     letter-spacing: 1px;
   }
   @include breakpoint(tablet){
+    display: none;
     background: #fff;
     width: 70.7%;
-    margin-top:83px;
     width: 70.7%;
+    overflow: hidden;
     text-align: left;
     padding: 13.4% 0% 1% 14%;
-
+    height: 100vh;
     li {
       margin:0;
       margin-bottom: 3.2%;
@@ -44,17 +49,52 @@
       display: none;
     }
   }
+  @include breakpoint(mobile) {
+    padding: 13.6% 0% 1% 12.3%;
+    li {
+      line-height: 22px;
+      display: block;
+    }
+  }
 }
 .header-links__item {
+  display: inline-block;
+  border-bottom: 3px solid transparent;
+  padding-bottom: 6px;
+  position: relative;
+  &:after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 3px;
+    background: white;
+    bottom: 24px;
+    left: 0;
+    display: none;
+    @include breakpoint(tablet) {
+      display: none !important;
+    }
+  }
   &:hover {
+    color: white;
+    &:after {
+      display: block;
+    }
     .header__submenu {
       display: block;
+    }
+
+    @include breakpoint(tablet) {
+      .header__submenu {
+        display: none;
+      }
     }
   }
   @include breakpoint(tablet){
     display: block;
     width: 100%;
     background: #fff;
+    position: relative;
     p, a {
       text-align: left;
       @include fontSize(22px);
@@ -63,10 +103,49 @@
     a {
       margin-bottom: 0;
     }
+    &:before {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 20px;
+      left: -46px;
+      top: 24px;
+      background-image: url(#{$path-images}/nav-arrow.png);
+      background-size: 11px;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+    }
+    &.submenu-active {
+      &:before {
+        transform: rotate(0);
+        -ms-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -webkit-transform: rotate(0);
+      }
+    }
+  }
+  @include breakpoint(mobile) {
+    a {
+      font-size: 12px;
+      line-height: 33px;
+    }
+    &:before {
+      width: 20px;
+      height: 20px;
+      left: -25px;
+      top: 7px;
+      background-size: 6px;
+    }
   }
 }
 a.header-links__item__link {
-  color:#000;
+  @include breakpoint(tablet) {
+    color:#000;
+  }
 }
 .header-social {
   float: left;
@@ -83,6 +162,15 @@ li.header__logo {
   position: relative;
   z-index: 60;
   width: 12%;
+  display: inline-block;
+  height: 0;
+  &:hover {
+    display: inline-block;
+    border:none;
+    &:after {
+      display: none;
+    }
+  }
 }
 .header__logo img {
   margin-top: 10px;
@@ -92,7 +180,7 @@ li.header__logo {
   width: 23px;
   height: 45px;
   margin:10px;
-  background-image: url(#{$assetpath}/img/fb-header-ico.png);
+  background-image: url(#{$path-images}/fb-header-ico.png);
   background-repeat: no-repeat;
   background-size: 10px;
   float: left;
@@ -101,7 +189,7 @@ li.header__logo {
     margin-left:21px;
   }
   &.yt {
-    background-image: url(#{$assetpath}/img/yt-header-ico.png);
+    background-image: url(#{$path-images}/yt-header-ico.png);
     background-size: 23px;
   }
 
@@ -121,31 +209,30 @@ li.header__logo {
 
 // Testing
 
-nav {
-  display: none;
-}
 .header__submenu {
   display: none;
   max-width: 1700px;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   top:0;
   left:0;
   margin-top:65px;
   @extend .clearfix;
   background: #fff;
   @include breakpoint(tablet){
-    display: block;
     position: relative;
     margin-top: 0;
     margin-bottom: 2%;
   }
 }
+.submenu-active .header__submenu {
+  display: block !important;
+}
 .header__submenu__item {
   width: 25%;
   float: left;
   background: white;
-  border-right: 1px solid #eee;
+  border-right: 1px solid #ececec;
   padding: 3% 4%;
   padding-left: 7.1%;
   @include fontSize(15px);
@@ -172,6 +259,9 @@ nav {
     @include fontSize(26px);
     margin-bottom: -1%;
     color:#000;
+    span {
+      font-weight: 300;
+    }
   }
   @include breakpoint(tablet){
     display:none;
@@ -181,14 +271,41 @@ nav {
   @extend .header__submenu__item;
   text-align: left;
 }
+.header__submenu__item--articles.header__submenu__item {
+  padding: 2.7% 1.7% 3% 5.2%;
+  h2 {
+    text-align: left;
+  }
+  .header__submenu__article {
+    text-align: left;
+    width: 100%;
+    /* float: left; */
+    margin-bottom: 2.5%;
+    /* min-height: 87px; */
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+  }
+}
 .header__submenu__item__link {
   display: block;
   float: left;
   width: 100%;
   text-align: left;
   color:#000;
+  &:hover {
+    color:#000;
+  }
   @include breakpoint(tablet){
     margin:0;
+  }
+}
+.header__submenu__item--articles.header__submenu__item--double {
+  .header__submenu__article {
+    text-align: left;
+    width: 49%;
+    float: none;
+    margin-bottom: 2.5%;
   }
 }
 .header__submenu__article {
@@ -196,6 +313,7 @@ nav {
   width: 50%;
   float: left;
   margin-bottom: 2.5%;
+  min-height: 76px;
   img {
     width: 68px;
     float:left;
@@ -205,5 +323,59 @@ nav {
     float: left;
     text-transform: none;
     width: 138px;
+  }
+}
+.nav-ico {
+  display: none;
+  background: url(#{$path-images}/nav-ico.png);
+  height: 83px;
+  width: 83px;
+  margin-left: 18px;
+  background-size: 29px;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include breakpoint(tablet) {
+    display: block;
+  }
+  @include breakpoint(mobile) {
+    height: 42px;
+    width: 42px;
+    background-size: 16px;
+    margin-left: 3px;
+  }
+}
+.header-opened {
+  .nav-ico {
+    background-image: url(#{$path-images}/close.png);
+  }
+  .header-links {
+    display: block;
+  }
+}
+.header__logo--tablet {
+  display: none;
+  position: absolute;
+  width: 36%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  @include breakpoint(tablet) {
+    display: block;
+  }
+}
+.header__submenu__article--text {
+  float: left;
+  text-transform: none;
+  width: 138px;
+  margin-bottom: 12px;
+  @include fontSize(13px);
+  @include lineHeight(15px);
+  @include breakpoint(typoMax) {
+    font-size:cvp(14px, 1700px);
+    line-height:cvp(16px, 1700px);
+  }
+  color: #000;
+  &:hover {
+    color:#000;
   }
 }
