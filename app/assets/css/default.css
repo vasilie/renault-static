@@ -1608,3 +1608,46 @@ footer {
   @media (max-width: 767px) {
     .s-teaser-slider__arrow__left {
       margin: 3px 9px 0 0px; } }
+
+.w-search-popup__wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  position: fixed;
+  z-index: 9999; }
+
+.w-search-popup__input {
+  line-height: 50px;
+  display: inline-block;
+  background: transparent;
+  border: none;
+  font-size: 80px;
+  color: #fff;
+  border: none;
+  outline: none; }
+  .w-search-popup__input:active, .w-search-popup__input:focus {
+    border: none;
+    outline: none; }
+
+.w-search-popup {
+  border-bottom: 1px solid #fff;
+  width: 60%;
+  top: 43.3%;
+  position: relative;
+  left: 45%;
+  transform: translateX(-50%); }
+
+.w-search-popup__close,
+.w-search-popup__search-ico {
+  height: 50px;
+  width: 50px;
+  background-position: center;
+  background-size: 20%;
+  background: red; }
+
+.w-search-popup__close {
+  right: 10%;
+  position: absolute; }
+
+.w-search-popup__search-ico {
+  display: inline-block; }
