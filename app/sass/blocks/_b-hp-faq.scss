@@ -1,26 +1,96 @@
 .b-hp-faq {
   // display: none;
-  margin-bottom: 13.5%;
+  position: relative;
+  margin-bottom: 14.5%;
   overflow: hidden;
+  padding-bottom: 7%;
+  border-bottom: 1px solid #ececec;
   h2 {
     width: 19.2%;
     float: left;
+    @include breakpoint(tablet) {
+      margin-top: 1%;
+    }
+    @include breakpoint(mobile) {
+      width: 39.2%;
+      margin-bottom: 8%;
+    }
+  }
+  .s-teaser-slider__arrows {
+    top: 27%;
+    right: 10%;
+    @include breakpoint(tablet) {
+      top: 67%;
+      right: 3%;
+    }
+    @include breakpoint(mobile) {
+      top: 89.7%;
+      right: 0%;
+    }
+  }
+  @include breakpoint(mobile) {
+    padding-top: 8%;
   }
 }
 .b-hp-faq__item {
   width: 74.4%;
   float: left;
   .media-item__media {
-    width: 49%;
+    width: 44.8%;
     float: left;
+    @include breakpoint(tablet) {
+      width: 52.8%;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+    }
   }
   .media-item__content {
     width: 49%;
-    padding: 15% 2.3%;
+    padding: 14% 2.3% 16.2%;
     float: left;
+    h3 {
+      margin-bottom: 5%;
+      width: 71%;
+      @include fontSize(23px);
+    }
+    @include breakpoint(tablet) {
+      width: 47%;
+      padding: 18% 2.3% 16.2% 5%;
+      h3 {
+        @include fontSize(15px);
+        @include lineHeight(21px);
+      }
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+      padding: 8% 0;
+      h3 {
+        font-size: 14px;
+        line-height: 16px;
+        width: 100%;
+      }
+    }
   }
 }
 .b-hp-faq__slider {
   display: block;
   overflow: hidden;
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
+}
+.b-hp-faq__mask {
+  background: #f6f6f6;
+  position: absolute;
+  padding-top: 29%;
+  width: 93.7%;
+  top: 16%;
+  @include breakpoint(tablet) {
+    padding-top: 31%;
+    width: 100%;
+  }
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }

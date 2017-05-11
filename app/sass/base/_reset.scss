@@ -26,6 +26,9 @@ footer, header, hgroup, menu, nav, section {
 html, body {
 	line-height: 1;
 }
+body {
+	overflow-x: hidden;
+}
 a {
 	text-decoration: none;
 	color:inherit;

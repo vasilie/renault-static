@@ -4,9 +4,100 @@
   img {
     display: block;
   }
+
+}
+.b-hp-viewer__wrapper {
+  position: relative;
+}
+.bx-wrapper {
+  border: none !important;
 }
 .b-hp-viewer__item {
+  position: relative;
   img {
+    display: block;
     width:100%;
+  }
+}
+.b-hp-viewer__arrow {
+  z-index: 3;
+  position: absolute;
+  top: 51%;
+  width: 55px;
+  height: 55px;
+  background-size: 55px;
+  background-position: center;
+  background-repeat: no-repeat;
+  & >a {
+    display: block;
+    height: 100%;
+  }
+  @include breakpoint(tablet) {
+    width: 26px;
+    height: 26px;
+    background-size: 26px;
+  }
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+.b-hp-viewer__arrow--left {
+  left:3%;
+  @extend .b-hp-viewer__arrow;
+  background-image:url(#{$path-images}/viewer-arrow-left.png);
+}
+.b-hp-viewer__arrow--right {
+  right:3%;
+  @extend .b-hp-viewer__arrow;
+  background-image:url(#{$path-images}/viewer-arrow-right.png);
+}
+.b-hp-viewer__content {
+  position: absolute;
+  top: 39%;
+  left: 15.4%;
+  width: 787px;
+  .media-item__tag {
+    position: relative;
+    float: left;
+    padding: 11px 21px;
+    margin-bottom: 1%;
+    @include breakpoint(tablet) {
+      padding: 7px 10px;
+
+    }
+    @include breakpoint(mobile) {
+      padding: 7px 4px;
+    }
+  }
+  span {
+    display: block;
+    float: left;
+    @include fontSize(35px);
+    font-weight: bold;
+    color:white;
+    @include breakpoint(tablet) {
+      @include fontSize(16px);
+    }
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+  h2 {
+    width: 100%;
+    color:white;
+    float: left;
+    color: white;
+    font-size: 71px;
+    font-weight: 900;
+    @include breakpoint(tablet) {
+      @include fontSize(32px);
+    }
+    @include breakpoint(mobile) {
+      @include fontSize(19px);
+    }
+  }
+  @include breakpoint(mobile) {
+    top: 20%;
+    left: 6.4%;
   }
 }

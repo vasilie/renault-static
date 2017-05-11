@@ -1,4 +1,8 @@
 .s-teaser-slider {
+  h2 {
+    position: absolute;
+    z-index: 10;
+  }
   width: 100%;
   position: relative;
   img {
@@ -8,10 +12,19 @@
 .s-teaser-slider__item__media {
 }
 .s-teaser-slider__item__content {
+  top: 27%;
+  position: absolute;
+  width: 260px;
+  left: 10%;
   h3 {
     color: white;
-    @include lineHeight(34px);
     margin-bottom: 6%;
+    @include lineHeight(34px);
+    @include fontSize(31px);
+    @include breakpoint(typoMax) {
+      font-size: cvp(31px, 1700px);
+      line-height: cvp(34px, 1700px);
+    }
     @include breakpoint(tablet){
       @include fontSize(16px);
       @include lineHeight(21px);
@@ -20,23 +33,24 @@
     }
   }
   p {
+    color:white;
     margin-bottom: 19%;
     @include breakpoint(tablet){
       display: none;
     }
   }
   .b-button {
+    color:#000;
     @include breakpoint(tablet){
-      background: white;
       box-shadow: none;
       padding: 10px 13px;
       font-size: 10px;
     }
   }
-  position: absolute;
-  width: 260px;
-  top: 16%;
-  left: 10%;
+  @include breakpoint(mobile) {
+    top: 34.5%;
+  }
+
 }
 .s-teaser-slider__pre-heading {
   font-family:$text__family--Airways;
@@ -44,8 +58,72 @@
   color: #ffcc33;
   margin-bottom: 5.1%;
   display: block;
+  position: absolute;
+  z-index: 22;
+  text-transform: none;
+  top: 18.2%;
+  left: 10.1%;
+  width: auto !important;
   @include breakpoint(tablet){
     margin-bottom: 0%;
     @include fontSize(16px);
+  }
+  @include breakpoint(mobile) {
+    position: absolute !important;
+  }
+}
+.s-teaser-slider__arrows {
+  z-index: 10;
+  position: absolute;
+  top: 19.7%;
+  font-weight: bold;
+  right: 8%;
+  &>div {
+    float: left;
+    color:white;
+    @include fontSize(15px);
+    @include breakpoint(tablet) {
+      @include fontSize(10px);
+    }
+    @include breakpoint(mobile) {
+      @include fontSize(15px);
+      top: 20.7%;
+      font-weight: bold;
+      right: 3%;
+    }
+  }
+}
+.s-teaser-slider__arrow__left,
+.s-teaser-slider__arrow__right {
+  width: 10px;
+  height: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  @include breakpoint(tablet) {
+    background-size: 5px;
+  }
+  @include breakpoint(mobile) {
+    background-size: 8px;
+  }
+}
+.s-teaser-slider__arrow__right {
+  background-image: url(#{$path-images}/business-slider-arrow--right.png);
+  margin: 3px 0 0 13px;
+  @include breakpoint(tablet) {
+    margin: 0px 0 0 4px;
+  }
+  @include breakpoint(mobile) {
+    margin: 3px 0px 0px 9px;
+  }
+}
+.s-teaser-slider__arrow__left {
+  background-image: url(#{$path-images}/business-slider-arrow--left.png);
+  margin: 3px 13px 0 0px;
+  @include breakpoint(tablet) {
+    margin: 0 4px 0 0;
+  }
+  @include breakpoint(mobile) {
+    margin: 3px 9px 0 0px;
   }
 }

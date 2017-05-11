@@ -1,3 +1,7 @@
+.content {
+  overflow:hidden;
+  display: block;
+}
 .header-opened {
   .main-content {
     @include breakpoint(tablet) {
@@ -9,7 +13,13 @@
     display: block;
   }
 }
+.main-content {
+  padding-top:65px;
+  width: 100%;
+  overflow: hidden;
+}
 .wrapper {
+  overflow: hidden;
   @extend .clearfix;
   width: 100%;
   margin: 0 auto;

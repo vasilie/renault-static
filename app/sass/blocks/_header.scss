@@ -13,6 +13,7 @@
   width: 100%;
   @include breakpoint(tablet) {
     // display: none;
+    position: relative;
     z-index: 9999;
     height: 83px;
   }

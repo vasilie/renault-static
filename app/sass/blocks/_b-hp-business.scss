@@ -4,6 +4,12 @@
   h2 {
     width: 100%;
     margin-bottom: 4.7%;
+    position: absolute;
+    @include breakpoint(mobile) {
+      @include fontSize(23px);
+      margin-bottom: 8%;
+      position: relative;
+    }
   }
 }
 .b-hp-business__item {
@@ -77,6 +83,7 @@
 }
 .b-hp-business__item--G, .b-hp-business__item--7 {
   overflow:hidden;
+  position: relative;
   @extend .b-hp-business__item;
   width: 49.2%;
   border:24px solid #ffcc33;
