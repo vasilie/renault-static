@@ -28,7 +28,6 @@ footer, header, hgroup, menu, nav, section {
   display: block; }
 
 html, body {
-  overflow-x: hidden;
   line-height: 1; }
 
 a {
@@ -618,8 +617,7 @@ li.header__logo {
     color: #000; }
 
 .b-hp-viewer {
-  display: block;
-  display: none; }
+  display: block; }
   .b-hp-viewer img {
     display: block; }
 
@@ -777,7 +775,7 @@ li.header__logo {
     .b-hp-news__item--D, .b-hp-news__item--4 {
       margin-bottom: 11.6%; } }
 
-.b-button {
+.b-button, .b-button--white {
   text-align: center;
   display: inline-block;
   padding: 20px 26px;
@@ -788,15 +786,20 @@ li.header__logo {
   box-shadow: 0px 16px 37px 3px rgba(0, 0, 0, 0.3);
   margin-bottom: 9.2%; }
   @media (max-width: 1023px) {
-    .b-button {
+    .b-button, .b-button--white {
       padding: 19px 21px;
       font-size: 11px;
       font-size: 0.6875rem; } }
   @media (max-width: 767px) {
-    .b-button {
+    .b-button, .b-button--white {
       font-size: 8px;
       font-size: 0.5rem;
       padding: 11px 11px; } }
+
+.b-button--white {
+  background: white;
+  box-shadow: none;
+  padding: 15px 25px; }
 
 .b-hp-fan {
   display: block;
@@ -912,7 +915,10 @@ li.header__logo {
       display: none; } }
 
 .b-hp-vu {
-  padding-left: 6%; }
+  padding-left: 6%;
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid #ececec; }
   .b-hp-vu h2 {
     margin-top: 6.9%;
     margin-bottom: 4.6%;
@@ -996,6 +1002,7 @@ li.header__logo {
       margin-right: 0; } }
 
 .b-hp-faq {
+  margin-bottom: 13.5%;
   overflow: hidden; }
   .b-hp-faq h2 {
     width: 19.2%;
@@ -1089,6 +1096,9 @@ li.header__logo {
   overflow: hidden;
   width: 49.2%;
   border: 24px solid #ffcc33; }
+  @media (max-width: 1023px) {
+    .b-hp-business__item--G, .b-hp-business__item--7 {
+      border: 15px solid #ffcc33; } }
   @media (max-width: 767px) {
     .b-hp-business__item--G, .b-hp-business__item--7 {
       width: 100%;
@@ -1222,8 +1232,25 @@ footer {
     line-height: 34px;
     line-height: 2.125rem;
     margin-bottom: 6%; }
+    @media (max-width: 1023px) {
+      .s-teaser-slider__item__content h3 {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 21px;
+        line-height: 1.3125rem;
+        width: 54%;
+        margin-bottom: 14%; } }
   .s-teaser-slider__item__content p {
     margin-bottom: 19%; }
+    @media (max-width: 1023px) {
+      .s-teaser-slider__item__content p {
+        display: none; } }
+  @media (max-width: 1023px) {
+    .s-teaser-slider__item__content .b-button, .s-teaser-slider__item__content .b-button--white {
+      background: white;
+      box-shadow: none;
+      padding: 10px 13px;
+      font-size: 10px; } }
 
 .s-teaser-slider__pre-heading {
   font-family: "Airways", sans-serif;
@@ -1232,3 +1259,8 @@ footer {
   color: #ffcc33;
   margin-bottom: 5.1%;
   display: block; }
+  @media (max-width: 1023px) {
+    .s-teaser-slider__pre-heading {
+      margin-bottom: 0%;
+      font-size: 16px;
+      font-size: 1rem; } }

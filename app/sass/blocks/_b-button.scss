@@ -17,3 +17,9 @@
     padding: 11px 11px;
   }
 }
+.b-button--white {
+  @extend .b-button;
+  background: white;
+  box-shadow: none;
+  padding: 15px 25px;
+}

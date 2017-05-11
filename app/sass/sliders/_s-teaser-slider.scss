@@ -12,9 +12,26 @@
     color: white;
     @include lineHeight(34px);
     margin-bottom: 6%;
+    @include breakpoint(tablet){
+      @include fontSize(16px);
+      @include lineHeight(21px);
+      width: 54%;
+      margin-bottom: 14%;
+    }
   }
   p {
     margin-bottom: 19%;
+    @include breakpoint(tablet){
+      display: none;
+    }
+  }
+  .b-button {
+    @include breakpoint(tablet){
+      background: white;
+      box-shadow: none;
+      padding: 10px 13px;
+      font-size: 10px;
+    }
   }
   position: absolute;
   width: 260px;
@@ -27,4 +44,8 @@
   color: #ffcc33;
   margin-bottom: 5.1%;
   display: block;
+  @include breakpoint(tablet){
+    margin-bottom: 0%;
+    @include fontSize(16px);
+  }
 }

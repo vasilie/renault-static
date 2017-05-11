@@ -80,6 +80,9 @@
   @extend .b-hp-business__item;
   width: 49.2%;
   border:24px solid #ffcc33;
+  @include breakpoint(tablet){
+    border: 15px solid #ffcc33;
+  }
   @include breakpoint(mobile){
     width: 100%;
     margin-top: 17%;
