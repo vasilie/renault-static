@@ -155,10 +155,7 @@ a.header-links__item__link {
     display: none;
   }
 }
-.header-search {
-  float: right;
-  width: 100px;
-}
+
 li.header__logo {
   position: relative;
   z-index: 60;
@@ -196,17 +193,31 @@ li.header__logo {
 
 }
 .header-search {
-  width: 23px;
-  height: 45px;
-  margin:10px;
-  margin-right:33px;
+  width: 65px;
+  height: 65px;
+  margin: 0;
   float: right;
-  background-image: url(#{$assetpath}/img/header-search-ico.png);
+  background-image: url(#{$path-images}/header-search-ico.png);
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  @include breakpoint(tablet) {
+    width: 82px;
+    height: 82px;
+    background-size: 32px;
+    margin-right: 5%;
+  }
+  @include breakpoint(mobile) {
+    width: 42px;
+    height: 42px;
+    background-size: 17px;
+    margin-right: 7px;
+  }
 }
-
 
 // Testing
 

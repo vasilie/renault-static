@@ -17,6 +17,9 @@
   padding-top:65px;
   width: 100%;
   overflow: hidden;
+  @include breakpoint(tablet) {
+    padding-top:0;
+  }
 }
 .wrapper {
   overflow: hidden;

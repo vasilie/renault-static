@@ -96,6 +96,9 @@
       @include fontSize(19px);
     }
   }
+  @include breakpoint(tablet) {
+    width: 80%;
+  }
   @include breakpoint(mobile) {
     top: 20%;
     left: 6.4%;
